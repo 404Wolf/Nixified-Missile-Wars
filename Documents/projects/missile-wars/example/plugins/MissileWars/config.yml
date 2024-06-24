@@ -1,0 +1,124 @@
+debug: false
+setup_mode: false
+antispam_intervall:
+  team_change_command: 25
+contact_auth_server: true
+prefetch_players: true
+restart_after_fights: -1
+arenas:
+  folder: plugins/MissileWars/arenas
+lobbies:
+  multiple_lobbies: false
+  folder: plugins/MissileWars/lobbies
+  default_lobby: lobby0.yml
+missiles:
+  folder: plugins/MissileWars/missiles
+shields:
+  folder: plugins/MissileWars/shields
+replace:
+  material: JUKEBOX
+  after_ticks: 2
+  radius: 15
+motd:
+  enable: true
+  lobby: '&6•&e● MissileWars &7| &eLobby'
+  ingame: '&6•&e● MissileWars &7| &bIngame'
+  ended: '&6•&e● MissileWars &7| &cRestarting...'
+fightstats:
+  enable: false
+  show_real_skins: true
+fallback_spawn:
+  world: world
+  x: 216.0
+  y: 64.0
+  z: -204.0
+  yaw: 0.0
+  pitch: 0.0
+mysql:
+  host: localhost
+  database: db
+  port: '3306'
+  user: root
+  password: ''
+  fights_table: mw_fights
+  fightmember_table: mw_fightmember
+sidebar:
+  title: '&eInfo ●&6•'
+  member_list_style: '%team_color%%playername%'
+  member_list_max: 4
+  entries:
+  - '&7Time left:'
+  - '&e» %time%m'
+  - ''
+  - '%team1% &7» %team1_color%%team1_amount%'
+  - ''
+  - '%team2% &7» %team2_color%%team2_amount%'
+menus:
+  inventory_menu:
+    team_selection_menu:
+      title: '&eTeam Selection Menu'
+      team_item: '{player-team-name}'
+    map_vote_menu:
+      title: '&eMap Vote Menu'
+      map_item: '&e{arena-name}'
+      vote_result_bar: '&7{vote-percent}%'
+      navigation:
+        backwards_item:
+          active: '&eprevious page'
+          inactive: '&7previous page'
+        forwards_item:
+          active: '&enext page'
+          inactive: '&7next page'
+  hotbar_menu:
+    game_join_menu:
+      items:
+        team_selection:
+          display_name: '&eTeam Selection'
+          material: '{player-team-item}'
+          slot: 2
+          priority: 0
+          lore:
+          - '&2Right click to open the'
+          - '&2team selection menu!'
+          left_click_actions: []
+          right_click_actions:
+          - '[player-cmd] mw teammenu'
+        mapVote_active:
+          display_name: '&eMap Voting'
+          material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmMyNzEwNTI3MTllZjY0MDc5ZWU4YzE0OTg5NTEyMzhhNzRkYWM0YzI3Yjk1NjQwZGI2ZmJkZGMyZDZiNWI2ZSJ9fX0=
+          slot: 4
+          priority: 1
+          view_requirement:
+            type: string equals
+            input: '%missilewars_lobby_mapvote_state_this%'
+            output: RUNNING
+          lore:
+          - '&2Right click to open the'
+          - '&2map vote menu!'
+          left_click_actions: []
+          right_click_actions:
+          - '[player-cmd] mw mapmenu'
+        mapVote_inactive:
+          display_name: '&2Map Voting'
+          material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjFkZDRmZTRhNDI5YWJkNjY1ZGZkYjNlMjEzMjFkNmVmYTZhNmI1ZTdiOTU2ZGI5YzVkNTljOWVmYWIyNSJ9fX0=
+          slot: 4
+          priority: 0
+          lore:
+          - '&2Voted-Map: &7%missilewars_arena_displayname_this%'
+          left_click_actions: []
+          right_click_actions:
+          - '[player-cmd] mw mapmenu'
+        areaInfo:
+          display_name: '&eArena Info'
+          material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjhlYTU3Yzc1NTFjNmFiMzNiOGZlZDM1NGI0M2RmNTIzZjFlMzU3YzRiNGY1NTExNDNjMzRkZGVhYzViNmM4ZCJ9fX0=
+          slot: 6
+          priority: 0
+          lore:
+          - '&e> &fLobby: &7%missilewars_lobby_displayname_this%'
+          - '&e> &fArena: &7%missilewars_arena_displayname_this%'
+          - '&e> &fGame-Time: &7%missilewars_lobby_gameduration_this% min'
+          - '&e> &fMissiles: &7%missilewars_arena_missileamount_this%x'
+          - '&e> &fArena-Size: &7%missilewars_lobby_arenasize_X_this% x %missilewars_lobby_arenasize_Z_this%
+            blocks'
+          left_click_actions: []
+          right_click_actions: []

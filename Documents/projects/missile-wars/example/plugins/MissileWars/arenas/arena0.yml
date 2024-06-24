@@ -1,0 +1,122 @@
+---
+name: "arena0"
+display_name: "&eDefault map"
+display_material: "STONE"
+template_world: "default_map"
+auto_respawn: true
+game_spawn:
+  send_bow: true
+  send_pickaxe: false
+game_respawn:
+  send_bow: true
+  send_pickaxe: false
+do_tile_drops: false
+keep_inventory: false
+max_move_height: 170
+death_height: 65
+game_duration: 30
+fireball:
+  name: "Fireball"
+  occurrence: 2
+  destroy_portal: false
+arrow:
+  occurrence: 2
+  amount: 3
+save_statistics: true
+fall_protection:
+  enabled: true
+  duration: 60
+  message_only_on_start: false
+money:
+  win: 80
+  loss: 50
+  draw: 30
+equipment_interval:
+  custom_start_interval: 10
+  reset_after_respawn: true
+  custom_respawn_interval: 10
+  intervals_by_team_amount:
+    "1": 15
+    "2": 20
+    "4": 25
+  interval_factor_by_game_time:
+    "1800": 1.0
+    "300": 0.7
+    "600": 0.8
+    "900": 0.9
+missile:
+  onlyBlockPlaceable: false
+  onlyBetweenSpawnPlaceable: false
+  northFacing: true
+  eastFacing: true
+  southFacing: true
+  westFacing: true
+  schematics:
+  - egg: "CREEPER"
+    down: 2
+    dist: 2
+    schematic: "Tomahawk.schematic"
+    name: "&aTomahawk"
+    occurrence: 3
+  - egg: "BLAZE"
+    down: 2
+    dist: 2
+    schematic: "Cruiser.schematic"
+    name: "&eCruiser"
+    occurrence: 2
+  - egg: "SKELETON"
+    down: 2
+    dist: 2
+    schematic: "Sword.schematic"
+    name: "&7Sword"
+    occurrence: 2
+  - egg: "MOOSHROOM"
+    down: 2
+    dist: 2
+    schematic: "Juggernaut.schematic"
+    name: "&4Juggernaut"
+    occurrence: 1
+  - egg: "HORSE"
+    down: 2
+    dist: 2
+    schematic: "Piranha.schematic"
+    name: "&3Piranha"
+    occurrence: 3
+  - egg: "ENDERMAN"
+    down: 2
+    dist: 2
+    schematic: "Tunnelbore.schematic"
+    name: "&0Tunnelbore"
+    occurrence: 1
+shield:
+  fly_time: 20
+  schematics:
+  - schematic: "shield.schematic"
+    name: "&cShield"
+    occurrence: 1
+area:
+  min_x: -30
+  min_y: 0
+  min_z: -72
+  max_x: 30
+  max_y: 256
+  max_z: 72
+teamchange_ongoing_game: false
+spectator_spawn:
+  x: 0.0
+  "y": 100.0
+  z: 0.0
+  yaw: 90.0
+  pitch: 0.0
+team1_spawn:
+  x: 0.5
+  "y": 100.0
+  z: 45.5
+  yaw: 180.0
+  pitch: 0.0
+team2_spawn:
+  x: 0.5
+  "y": 100.0
+  z: -45.5
+  yaw: 0.0
+  pitch: 0.0

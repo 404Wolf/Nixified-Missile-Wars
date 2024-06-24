@@ -1,0 +1,42 @@
+---
+name: "Lobby3"
+display_name: "&eDefault game"
+auto_load: true
+world: "world"
+lobby_time: 60
+min_players: 2
+max_players: 20
+max_spectators: -1
+team_1:
+  name: "Team1"
+  color: "&c"
+team_2:
+  name: "Team2"
+  color: "&a"
+team_spectator:
+  name: "Spectator"
+  color: "&f"
+spawn_point:
+  x: 256.0
+  "y": 64.0
+  z: -204.0
+  yaw: 0.0
+  pitch: 0.0
+after_game_spawn:
+  x: 216.0
+  "y": 64.0
+  z: -204.0
+  yaw: 0.0
+  pitch: 0.0
+area:
+  min_x: 236
+  min_y: 0
+  min_z: -224
+  max_x: 276
+  max_y: 256
+  max_z: -184
+map_choose_procedure: "FIRST"
+join_ongoing_game: "SPECTATOR"
+rejoin_ongoing_game: "LAST_TEAM"
+possible_arenas:
+- "arena0"
